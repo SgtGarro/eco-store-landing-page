@@ -6,6 +6,25 @@ $primary-text-color: #7c6a0a;
 $secondary-text-color: #e86424;
 $font-stack: "IBM Plex Sans", sans-serif;
 
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin buttonStyle() {
+  button {
+    display: grid;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +43,9 @@ body {
 button {
   color: inherit;
   cursor: pointer;
+}
+section {
+  padding: 6.4rem 4.8rem;
 }
 
 ////////////////////////////////////////////
@@ -59,24 +81,17 @@ button {
     display: flex;
     gap: 3.2rem;
   }
-  button {
-    display: grid;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    &:hover {
-      transform: scale(1.1);
-    }
-    svg {
-      width: 3.2rem;
-      height: 3.2rem;
-    }
+  @include buttonStyle();
+
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
   }
 }
 
 ////////////////////////////////////////////
 // HERO SECTION (ARTICLE)
+////////////////////////////////////////////
 article {
   color: $primary-text-color;
   display: flex;
@@ -99,6 +114,7 @@ article {
     button {
       padding: 2rem 4.4rem;
       background-color: $quaternary-color;
+      font-family: $font-stack;
       border: none;
       border-radius: 9999px;
       color: #fff;
@@ -114,5 +130,68 @@ article {
   img {
     width: 25vw;
     border-radius: 16px;
+  }
+}
+
+////////////////////////////////////////////
+// PRODUCT SECTION
+////////////////////////////////////////////
+.product-section {
+  .health-care {
+    margin-bottom: 7.2rem;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: $primary-text-color;
+      margin-bottom: 6.4rem;
+    }
+
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 15vw;
+      column-gap: 12rem;
+      row-gap: 8rem;
+      justify-content: center;
+    }
+
+    .product-card {
+      flex-basis: 20vw;
+      position: relative;
+      background-color: $secondary-color;
+      padding: 5.2rem 4rem 4.8rem;
+      border-radius: 8px;
+      color: $primary-text-color;
+      img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1.6rem;
+      }
+      h3 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      svg {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .furniture {
+    @extend .health-care;
+    .product-card {
+      color: #fff;
+      background-color: $tertiary-color;
+    }
   }
 }

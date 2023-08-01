@@ -18,6 +18,10 @@ button {
   cursor: pointer;
 }
 
+section {
+  padding: 6.4rem 4.8rem;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -56,7 +60,7 @@ button {
 .navbar button:hover {
   transform: scale(1.1);
 }
-.navbar button svg {
+.navbar svg {
   width: 3.2rem;
   height: 3.2rem;
 }
@@ -84,6 +88,7 @@ article .impact-section p {
 article .impact-section button {
   padding: 2rem 4.4rem;
   background-color: #fa9500;
+  font-family: "IBM Plex Sans", sans-serif;
   border: none;
   border-radius: 9999px;
   color: #fff;
@@ -97,4 +102,56 @@ article .impact-section button:hover {
 article img {
   width: 25vw;
   border-radius: 16px;
+}
+
+.product-section .health-care, .product-section .furniture {
+  margin-bottom: 7.2rem;
+}
+.product-section .health-care h2, .product-section .furniture h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #7c6a0a;
+  margin-bottom: 6.4rem;
+}
+.product-section .health-care .card-section, .product-section .furniture .card-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 15vw;
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
+  row-gap: 8rem;
+  justify-content: center;
+}
+.product-section .health-care .product-card, .product-section .furniture .product-card {
+  flex-basis: 20vw;
+  position: relative;
+  background-color: #ffdac6;
+  padding: 5.2rem 4rem 4.8rem;
+  border-radius: 8px;
+  color: #7c6a0a;
+}
+.product-section .health-care .product-card img, .product-section .furniture .product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.6rem;
+}
+.product-section .health-care .product-card h3, .product-section .furniture .product-card h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.product-section .health-care .product-card p, .product-section .furniture .product-card p {
+  font-size: 1.4rem;
+}
+.product-section .health-care .product-card svg, .product-section .furniture .product-card svg {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+.product-section .furniture .product-card {
+  color: #fff;
+  background-color: #babd8d;
 }/*# sourceMappingURL=style.css.map */
