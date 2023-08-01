@@ -9,6 +9,7 @@ $font-stack: "IBM Plex Sans", sans-serif;
 @mixin flexCenter($direction, $content, $align) {
   display: flex;
   flex-direction: $direction;
+  justify-content: $content;
   align-items: $align;
 }
 
@@ -60,9 +61,7 @@ section {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexCenter(row, space-between, center);
   width: 100%;
   color: $primary-text-color;
 
