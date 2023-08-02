@@ -280,3 +280,43 @@ article {
     color: $secondary-text-color;
   }
 }
+
+////////////////////////////////////////////
+// FOOTER SECTION
+////////////////////////////////////////////
+.footer {
+  background-color: $quaternary-color;
+  padding: 4.8rem;
+
+  color: #fff;
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 3.6rem;
+    cursor: pointer;
+  }
+
+  ul {
+    @include flexCenter(column, initial, initial);
+    color: inherit;
+    list-style: none;
+    gap: 2rem;
+    margin-bottom: 9.8rem;
+
+    li {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .social-media {
+    @include flexCenter(row, center, center);
+    gap: 3.2rem;
+    img {
+      width: 4.4rem;
+      height: 4.4rem;
+      cursor: pointer;
+    }
+  }
+}
